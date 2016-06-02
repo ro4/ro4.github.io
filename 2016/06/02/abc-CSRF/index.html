@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="1,2,3," />
+  <meta name="keywords" content="编程安全,CSRF," />
 
 
 
@@ -80,16 +80,20 @@
 
 
 
-<meta name="description" content="##who are you?">
+<meta name="description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="ro4.github.io/2016/05/19/test/index.html">
+<meta property="og:title" content="abc CSRF">
+<meta property="og:url" content="ro4.github.io/2016/06/02/abc-CSRF/index.html">
 <meta property="og:site_name" content="Fan">
-<meta property="og:description" content="##who are you?">
-<meta property="og:updated_time" content="2016-05-19T03:41:34.104Z">
+<meta property="og:description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwu3fty4j20mk01qjrh.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwujh767j205201ojra.jpg">
+<meta property="og:updated_time" content="2016-06-02T03:01:11.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="##who are you?">
+<meta name="twitter:title" content="abc CSRF">
+<meta name="twitter:description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg">
 
 
 
@@ -107,7 +111,7 @@
   };
 </script>
 
-  <title> test | Fan </title>
+  <title> abc CSRF | Fan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +241,7 @@
             
             
               
-                test
+                abc CSRF
               
             
           </h1>
@@ -249,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-19T11:40:48+08:00" content="2016-05-19">
-              2016-05-19
+            <time itemprop="dateCreated" datetime="2016-06-02T10:28:56+08:00" content="2016-06-02">
+              2016-06-02
             </time>
           </span>
 
@@ -260,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/19/test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/test/" itemprop="commentsCount"></span>
+                <a href="/2016/06/02/abc-CSRF/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/abc-CSRF/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -284,7 +288,30 @@
       
 
       
-        <p>##who are you?</p>
+        <h3 id="什么是CSRF"><a href="#什么是CSRF" class="headerlink" title="什么是CSRF"></a>什么是CSRF</h3><p> CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性。</p>
+ <a id="more"></a>
+<h3 id="CSRF可以干什么"><a href="#CSRF可以干什么" class="headerlink" title="CSRF可以干什么"></a>CSRF可以干什么</h3><p>利用网站对用户的信任去做一些操作。<br>举个例子，比如常见的社交网站都有关注的功能，这个接口可能是个ajax接口，地址像这样<code>fasibook.com/follow?uid=2333</code>，用户110到用户2333的页面上，有个关注的按钮，110这个用户点击了关注按钮，那么就会向这个接口发起请求，用户110就关注了2333。<br>构造一个地址，或者一个页面，让用户110在并非自己意愿的情况下请求了关注2333用户的这个接口，这就是一个CSRF攻击的简单例子，但是这里没有跨站。</p>
+<h3 id="常见CSRF方法"><a href="#常见CSRF方法" class="headerlink" title="常见CSRF方法"></a>常见CSRF方法</h3><ul>
+<li>贴图</li>
+</ul>
+<p>构造img标签，<code>&lt;img src=&quot;http://fasibook.com/follow?uid=2333&quot;&gt;</code>，当用户打开包含这个img标签的网页的时候，浏览器就会img标签里面的src地址发起一个get请求，而这个请求就不是用户的本意。</p>
+<ul>
+<li>钓鱼攻击</li>
+</ul>
+<p>要攻击一个存在问题的blog，那就先去目标blog留言，留下一个网址，诱其主人点击过来（这个就要看你的忽悠本事咯:p），然后构造个HTML表单提交些数据过去。</p>
+<h3 id="怎么写出安全的代码"><a href="#怎么写出安全的代码" class="headerlink" title="怎么写出安全的代码"></a>怎么写出安全的代码</h3><ul>
+<li>过滤</li>
+</ul>
+<p>把用户输入的东西都进行过滤，防止出现img等可以对陌生地址发起请求的标签。</p>
+<ul>
+<li>屏蔽非法来源地址</li>
+</ul>
+<p>对请求的reference进行判定，不是可信任的地址，接口直接拒绝请求。</p>
+<ul>
+<li>给请求加token</li>
+</ul>
+<p>每一个接口都带着有时限的token，请求来的时候，把token进行验证，如果不符合也视为非法请求，拒绝访问。</p>
+<h3 id="一次小实验"><a href="#一次小实验" class="headerlink" title="一次小实验"></a>一次小实验</h3><p>公司的内部系统的个人首页上，有个点赞的功能。<br><img src="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg" alt="图1"><br>接口的地址如图所示，我构造了一个img标签，对给我点赞的接口进行请求，然后发了个状态。<br><img src="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwu3fty4j20mk01qjrh.jpg" alt="图2"><br><img src="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwujh767j205201ojra.jpg" alt="图3"><br>可以看到，每当这个img出现在浏览器里时，都会发起一个get请求，就这样，一上午我就收获了50个赞。后来被机智的后台开发人员发现了我发的状态之后，加上了token验证，这个方法就失效了。</p>
 
       
     </div>
@@ -305,7 +332,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/1-2-3/" rel="tag">#1,2,3</a>
+            <a href="/tags/编程安全/" rel="tag">#编程安全</a>
+          
+            <a href="/tags/CSRF/" rel="tag">#CSRF</a>
           
         </div>
       
@@ -346,8 +375,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/19/test/"
-           data-title="test" data-url="ro4.github.io/2016/05/19/test/">
+      <div class="ds-thread" data-thread-key="2016/06/02/abc-CSRF/"
+           data-title="abc CSRF" data-url="ro4.github.io/2016/06/02/abc-CSRF/">
       </div>
     
   </div>
@@ -402,7 +431,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -442,7 +471,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CSRF"><span class="nav-number">1.</span> <span class="nav-text">什么是CSRF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF可以干什么"><span class="nav-number">2.</span> <span class="nav-text">CSRF可以干什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见CSRF方法"><span class="nav-number">3.</span> <span class="nav-text">常见CSRF方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么写出安全的代码"><span class="nav-number">4.</span> <span class="nav-text">怎么写出安全的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一次小实验"><span class="nav-number">5.</span> <span class="nav-text">一次小实验</span></a></li></ol></div>
             
           </div>
         </section>
