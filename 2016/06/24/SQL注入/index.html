@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程安全,CSRF," />
+  <meta name="keywords" content="编程安全,SQL注入," />
 
 
 
@@ -80,20 +80,16 @@
 
 
 
-<meta name="description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
+<meta name="description" content="SQL注入什么是SQL注入SQL 命令注入就是攻击者常用的一种创建或修改已有 SQL 语句的技术，从而达到取得隐藏数据，或覆盖关键的值，甚至执行数据库主机操作系统命令的目的。这是通过应用程序取得用户输入并与静态参数组合成 SQL 查询来实现的。下面将会给出一些真实的例子。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="abc CSRF">
-<meta property="og:url" content="ro4.github.io/2016/06/02/abc-CSRF/index.html">
+<meta property="og:title" content="SQL注入">
+<meta property="og:url" content="ro4.github.io/2016/06/24/SQL注入/index.html">
 <meta property="og:site_name" content="Fan">
-<meta property="og:description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwu3fty4j20mk01qjrh.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwujh767j205201ojra.jpg">
-<meta property="og:updated_time" content="2016-06-02T03:01:11.542Z">
+<meta property="og:description" content="SQL注入什么是SQL注入SQL 命令注入就是攻击者常用的一种创建或修改已有 SQL 语句的技术，从而达到取得隐藏数据，或覆盖关键的值，甚至执行数据库主机操作系统命令的目的。这是通过应用程序取得用户输入并与静态参数组合成 SQL 查询来实现的。下面将会给出一些真实的例子。">
+<meta property="og:updated_time" content="2016-06-24T08:33:41.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="abc CSRF">
-<meta name="twitter:description" content="什么是CSRF CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg">
+<meta name="twitter:title" content="SQL注入">
+<meta name="twitter:description" content="SQL注入什么是SQL注入SQL 命令注入就是攻击者常用的一种创建或修改已有 SQL 语句的技术，从而达到取得隐藏数据，或覆盖关键的值，甚至执行数据库主机操作系统命令的目的。这是通过应用程序取得用户输入并与静态参数组合成 SQL 查询来实现的。下面将会给出一些真实的例子。">
 
 
 
@@ -111,7 +107,7 @@
   };
 </script>
 
-  <title> abc CSRF | Fan </title>
+  <title> SQL注入 | Fan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +237,7 @@
             
             
               
-                abc CSRF
+                SQL注入
               
             
           </h1>
@@ -253,8 +249,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-02T10:28:56+08:00" content="2016-06-02">
-              2016-06-02
+            <time itemprop="dateCreated" datetime="2016-06-24T16:30:24+08:00" content="2016-06-24">
+              2016-06-24
             </time>
           </span>
 
@@ -264,8 +260,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/02/abc-CSRF/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/abc-CSRF/" itemprop="commentsCount"></span>
+                <a href="/2016/06/24/SQL注入/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/24/SQL注入/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,30 +284,19 @@
       
 
       
-        <h3 id="什么是CSRF"><a href="#什么是CSRF" class="headerlink" title="什么是CSRF"></a>什么是CSRF</h3><p> CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性。</p>
- <a id="more"></a>
-<h3 id="CSRF可以干什么"><a href="#CSRF可以干什么" class="headerlink" title="CSRF可以干什么"></a>CSRF可以干什么</h3><p>利用网站对用户的信任去做一些操作。<br>举个例子，比如常见的社交网站都有关注的功能，这个接口可能是个ajax接口，地址像这样<code>fasibook.com/follow?uid=2333</code>，用户110到用户2333的页面上，有个关注的按钮，110这个用户点击了关注按钮，那么就会向这个接口发起请求，用户110就关注了2333。<br>构造一个地址，或者一个页面，让用户110在并非自己意愿的情况下请求了关注2333用户的这个接口，这就是一个CSRF攻击的简单例子，但是这里没有跨站。</p>
-<h3 id="常见CSRF方法"><a href="#常见CSRF方法" class="headerlink" title="常见CSRF方法"></a>常见CSRF方法</h3><ul>
-<li>贴图</li>
+        <h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3><h4 id="什么是SQL注入"><a href="#什么是SQL注入" class="headerlink" title="什么是SQL注入"></a>什么是SQL注入</h4><p>SQL 命令注入就是攻击者常用的一种创建或修改已有 SQL 语句的技术，从而达到取得隐藏数据，或覆盖关键的值，甚至执行数据库主机操作系统命令的目的。这是通过应用程序取得用户输入并与静态参数组合成 SQL 查询来实现的。下面将会给出一些真实的例子。<br> <a id="more"></a></p>
+<h4 id="一些案例"><a href="#一些案例" class="headerlink" title="一些案例"></a>一些案例</h4><p>很多Web开发者没有意识到SQL查询是可以被篡改的，从而把SQL查询当作可信任的命令。殊不知，SQL查询是可以绕开访问控制，从而绕过身份验证和权限检查的。更有甚者，有可能通过SQL查询去运行主机系统级的命令。</p>
+<p>下面将通过一些真实的例子来详细讲解SQL注入的方式。</p>
+<p>考虑以下简单的登录表单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;/login&quot; method=&quot;POST&quot;&gt;</span><br><span class="line">&lt;p&gt;Username: &lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Password: &lt;input type=&quot;password&quot; name=&quot;password&quot; /&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;登陆&quot; /&gt;&lt;/p&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p>我们的处理里面的SQL可能是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">username:=r.Form.Get(&quot;username&quot;)</span><br><span class="line">password:=r.Form.Get(&quot;password&quot;)</span><br><span class="line">sql:=&quot;SELECT * FROM user WHERE username=&apos;&quot;+username+&quot;&apos; AND password=&apos;&quot;+password+&quot;&apos;&quot;</span><br></pre></td></tr></table></figure></p>
+<p>如果用户的输入的用户名如下，密码任意<code>myuser&#39; or &#39;foo&#39; = &#39;foo&#39; --</code><br>那么我们的SQL变成了如下所示：<code>SELECT * FROM user WHERE username=&#39;myuser&#39; or &#39;foo&#39;==&#39;foo&#39; --&#39;&#39; AND password=&#39;xxx&#39;</code><br>在SQL里面–是注释标记，所以查询语句会在此中断。这就让攻击者在不知道任何合法用户名和密码的情况下成功登录了。<br>对于MSSQL还有更加危险的一种SQL注入，就是控制系统，下面这个可怕的例子将演示如何在某些版本的MSSQL数据库上执行系统命令。<br><code>sql:=&quot;SELECT * FROM products WHERE name LIKE &#39;%&quot;+prod+&quot;%&#39;&quot;
+Db.Exec(sql)</code><br>如果攻击提交<code>a%&#39; exec master..xp_cmdshell &#39;net user test testpass /ADD&#39; --</code>作为变量 prod的值，那么sql将会变成<br><code>sql:=&quot;SELECT * FROM products WHERE name LIKE &#39;%a%&#39; exec master..xp_cmdshell &#39;net user test testpass /ADD&#39;--%&#39;&quot;</code><br>MSSQL服务器会执行这条SQL语句，包括它后面那个用于向系统添加新用户的命令。如果这个程序是以sa运行而 MSSQLSERVER服务又有足够的权限的话，攻击者就可以获得一个系统帐号来访问主机了。</p>
+<h4 id="如何防止SQL注入"><a href="#如何防止SQL注入" class="headerlink" title="如何防止SQL注入"></a>如何防止SQL注入</h4><ul>
+<li>严格限制Web应用的数据库的操作权限，给此用户提供仅仅能够满足其工作的最低权限，从而最大限度的减少注入攻击对数据库的危害。<br>检查输入的数据是否具有所期望的数据格式，严格限制变量的类型，例如使用regexp包进行一些匹配处理，或者使用strconv包对字符串转化成其他基本类型的数据进行判断。</li>
+<li>对进入数据库的特殊字符（’”\尖括号&amp;*;等）进行转义处理，或编码转换。Go 的text/template包里面的HTMLEscapeString函数可以对字符串进行转义处理。<br>所有的查询语句建议使用数据库提供的参数化查询接口，参数化的语句使用参数而不是将用户输入变量嵌入到SQL语句中，即不要直接拼接SQL语句。例如使用database/sql里面的查询函数Prepare和Query，或者Exec(query string, args …interface{})。</li>
+<li>在应用发布之前建议使用专业的SQL注入检测工具进行检测，以及时修补被发现的SQL注入漏洞。网上有很多这方面的开源工具，例如sqlmap、SQLninja等。</li>
+<li>避免网站打印出SQL错误信息，比如类型错误、字段不匹配等，把代码里的SQL语句暴露出来，以防止攻击者利用这些错误信息进行SQL注入。</li>
 </ul>
-<p>构造img标签，<code>&lt;img src=&quot;http://fasibook.com/follow?uid=2333&quot;&gt;</code>，当用户打开包含这个img标签的网页的时候，浏览器就会img标签里面的src地址发起一个get请求，而这个请求就不是用户的本意。</p>
-<ul>
-<li>钓鱼攻击</li>
-</ul>
-<p>要攻击一个存在问题的blog，那就先去目标blog留言，留下一个网址，诱其主人点击过来（这个就要看你的忽悠本事咯:p），然后构造个HTML表单提交些数据过去。</p>
-<h3 id="怎么写出安全的代码"><a href="#怎么写出安全的代码" class="headerlink" title="怎么写出安全的代码"></a>怎么写出安全的代码</h3><ul>
-<li>过滤</li>
-</ul>
-<p>把用户输入的东西都进行过滤，防止出现img等可以对陌生地址发起请求的标签。</p>
-<ul>
-<li>屏蔽非法来源地址</li>
-</ul>
-<p>对请求的reference进行判定，不是可信任的地址，接口直接拒绝请求。</p>
-<ul>
-<li>给请求加token</li>
-</ul>
-<p>每一个接口都带着有时限的token，请求来的时候，把token进行验证，如果不符合也视为非法请求，拒绝访问。</p>
-<h3 id="一次小实验"><a href="#一次小实验" class="headerlink" title="一次小实验"></a>一次小实验</h3><p>公司的内部系统的个人首页上，有个点赞的功能。<br><img src="http://ww3.sinaimg.cn/mw690/6af4b991gw1f4fwtf6wbnj20k40dwmzn.jpg" alt="图1"><br>接口的地址如图所示，我构造了一个img标签，对给我点赞的接口进行请求，然后发了个状态。<br><img src="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwu3fty4j20mk01qjrh.jpg" alt="图2"><br><img src="http://ww1.sinaimg.cn/mw690/6af4b991gw1f4fwujh767j205201ojra.jpg" alt="图3"><br>可以看到，每当这个img出现在浏览器里时，都会发起一个get请求，就这样，一上午我就收获了50个赞。后来被机智的后台开发人员发现了我发的状态之后，加上了token验证，这个方法就失效了。</p>
 
       
     </div>
@@ -334,7 +319,7 @@
           
             <a href="/tags/编程安全/" rel="tag">#编程安全</a>
           
-            <a href="/tags/CSRF/" rel="tag">#CSRF</a>
+            <a href="/tags/SQL注入/" rel="tag">#SQL注入</a>
           
         </div>
       
@@ -343,17 +328,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/06/02/abc-CSRF/" rel="next" title="abc CSRF">
+                <i class="fa fa-chevron-left"></i> abc CSRF
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/24/SQL注入/" rel="prev" title="SQL注入">
-                SQL注入 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -379,8 +360,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/02/abc-CSRF/"
-           data-title="abc CSRF" data-url="ro4.github.io/2016/06/02/abc-CSRF/">
+      <div class="ds-thread" data-thread-key="2016/06/24/SQL注入/"
+           data-title="SQL注入" data-url="ro4.github.io/2016/06/24/SQL注入/">
       </div>
     
   </div>
@@ -475,7 +456,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CSRF"><span class="nav-number">1.</span> <span class="nav-text">什么是CSRF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF可以干什么"><span class="nav-number">2.</span> <span class="nav-text">CSRF可以干什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见CSRF方法"><span class="nav-number">3.</span> <span class="nav-text">常见CSRF方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么写出安全的代码"><span class="nav-number">4.</span> <span class="nav-text">怎么写出安全的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一次小实验"><span class="nav-number">5.</span> <span class="nav-text">一次小实验</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL注入"><span class="nav-number">1.</span> <span class="nav-text">SQL注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是SQL注入"><span class="nav-number">1.1.</span> <span class="nav-text">什么是SQL注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些案例"><span class="nav-number">1.2.</span> <span class="nav-text">一些案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防止SQL注入"><span class="nav-number">1.3.</span> <span class="nav-text">如何防止SQL注入</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
